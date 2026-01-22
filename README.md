@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tikus Geprek - Bisnis Makanan Lezat dan Unik</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #ff6b35;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x600?text=Tikus+Geprek+Hero+Image');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about, .menu, .contact {
+            margin-bottom: 40px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            background-color: #ff6b35;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #e55a2b;
+        }
+        /* Styling untuk login dan pemesanan */
+        .login-section, .order-section {
+            display: none;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .login-form, .order-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .login-form h2, .order-form h2 {
+            margin-top: 0;
+        }
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .back-link {
+            margin-top: 20px;
+        }
+        .back-link a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tikus Geprek</h1>
+        <p>Bisnis Makanan Cepat Saji dengan Sentuhan Unik dan Lezat</p>
+        <button id="loginBtn">Masuk untuk Memesan</button>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Selamat Datang di Tikus Geprek!</h1>
+            <p>Rasakan kepuasan geprek yang tak tertandingi. Pesan sekarang!</p>
+            <button onclick="showLogin()">Pesan Sekarang</button>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Tentang Kami</h2>
+        <p>Tikus Geprek adalah bisnis makanan cepat saji yang menghadirkan hidangan geprek dengan bahan-bahan segar dan resep rahasia yang membuatnya unik. Kami fokus pada kualitas dan kepuasan pelanggan, dengan tema yang lucu dan menarik untuk membuat pengalaman makan Anda lebih seru. Dari ayam geprek hingga variasi lainnya, kami siap memanjakan lidah Anda!</p>
+    </section>
+
+    <section class="menu">
+        <h2>Menu Unggulan</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150?text=Ayam+Geprek" alt="Ayam Geprek">
+                <h3>Ayam Geprek</h3>
+                <p>Ayam crispy yang digeprek dengan sambal spesial. Harga: Rp 25.000</p>
+                <button onclick="showLogin()">Pesan</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150?text=Tikus+Geprek+Spesial" alt="Tikus Geprek Spesial">
+                <h3>Tikus Geprek Spesial</h3>
+                <p>Varian unik dengan tambahan topping. Harga: Rp 30.000</p>
+                <button onclick="showLogin()">Pesan</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150?text=Minuman+Segar" alt="Minuman Segar">
+                <h3>Minuman Segar</h3>
+                <p>Es teh manis atau jus buah segar. Harga: Rp 10.000</p>
+                <button onclick="showLogin()">Pesan</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Hubungi Kami</h2>
+        <p>Alamat: Jl. Contoh No. 123, Kota Imajiner, Indonesia</p>
+        <p>Telepon: +62 123 456 789</p>
+        <p>Email: info@tikusgeprek.com</p>
+        <p>Ikuti kami di sosial media: <a href="#" style="color: #ff6b35;">Instagram</a> | <a href="#" style="color: #ff6b35;">Facebook</a></p>
+    </section>
+
+    <!-- Halaman Login -->
+    <section id="loginSection" class="login-section">
+        <div class="login-form">
+            <h2>Masuk ke Akun Anda</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Masuk</button>
+            </form>
+            <p>Belum punya akun? <a href="#" onclick="alert('Fitur daftar belum diimplementasikan')">Daftar di sini</a></p>
+            <div class="back-link">
+                <a href="#" onclick="hideLogin()">Kembali ke Beranda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman Pemesanan -->
+    <section id="orderSection" class="order-section">
+        <div class="order-form">
+            <h2>Form Pemesanan</h2>
+            <form id="orderForm">
+                <div class="order-item">
+                    <label>Ayam Geprek (Rp 25.000)</label>
+                    <input type="number" id="ayamQty" min="0" value="0">
+                </div>
+                <div class="order-item">
+                    <label>Tikus Geprek Spesial (Rp 30.000)</label>
+                    <input type="number" id="tikusQty" min="0" value="0">
+                </div>
+                <div class="order-item">
+                    <label>Minuman Segar (Rp 10.000)</label>
+                    <input type="number" id="minumQty" min="0" value="0">
+                </div>
+                <input type="text" id="alamat" placeholder="Alamat Pengiriman" required>
+                <button type="submit">Kirim Pesanan</button>
+            </form>
+            <p id="total">Total: Rp 0</p>
+            <div class="back-link">
+                <a href="#" onclick="hideOrder()">Kembali ke Beranda</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tikus Geprek. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan login
+        function showLogin() {
+            document.getElementById('loginSection').style.display = 'block';
+            document.getElementById('orderSection').style.display = 'none';
+        }
+
+        // Fungsi untuk menyembunyikan login
+        function hideLogin() {
+            document.getElementById('loginSection').style.display = 'none';
+        }
+
+        // Fungsi untuk menyembunyikan pemesanan
+        function hideOrder() {
+            document.getElementById('orderSection').style.display = 'none';
+        }
+
+        // Simulasi login
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Login berhasil! Sekarang Anda bisa memesan.");
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('orderSection').style.display = 'block';
+        });
+
+        // Hitung total pemesanan
+        document.getElementById("orderForm").addEventListener("input", function() {
+            var ayam = parseInt(document.getElementById("ayamQty").value) || 0;
+            var tikus = parseInt(document.getElementById("tikusQty").value) || 0;
+            var minum = parseInt(document.getElementById("minumQty").value) || 0;
+            var total = (ayam * 25000) + (tikus * 30000) + (minum * 10000);
+            document.getElementById("total").textContent = "Total: Rp " + total.toLocaleString();
+        });
+
+        // Simulasi kirim pesanan
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Pesanan Anda telah dikirim! Terima kasih.");
+            this.reset();
+            document.getElementById("total").textContent = "Total: Rp 0";
+        });
+    </script>
+
+</body>
+</html>
